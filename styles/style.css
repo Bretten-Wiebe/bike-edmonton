@@ -50,6 +50,15 @@
 	gap: 24px;
 }
 
+.grid-3col {
+	display: grid;
+	grid-template : auto / 1fr 1fr 1fr;
+	justify-content: space-between;
+	align-content: stretch;
+
+	gap: 24px;
+}
+
 .column-60 {
 	width: 60%;
 }
@@ -75,6 +84,14 @@
 	flex-direction: row;
 	align-items: center;
 	gap: 16px;
+}
+
+.step-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	gap: 24px;
 }
 
 /* -----Spacing----- */
@@ -103,15 +120,24 @@
 }
 
 .spacer-medium {
-	height: 24px;
+	height: 36px;
 }
 
 .spacer-large {
 	height: 48px;
 }
 
+.spacer-mega {
+	height: 384px;
+}
+
 .gap-large {
 	gap: 80px;
+}
+
+.width-100 {
+	width: 100%;
+	min-width: 100%;
 }
 
 /* -----Typography----- */
@@ -120,7 +146,7 @@ h1 {
 	color: #04387C;
 	font-family: "aktiv-grotesk", sans-serif;
 	font-weight: 700;
-	font-size: 4.5rem;
+	font-size: 4.75rem;
 	line-height: 4.5rem;
 	text-transform: uppercase;
 
@@ -131,7 +157,8 @@ h1 {
 	color: #04387C;
 	font-family: "aktiv-grotesk", sans-serif;
 	font-weight: 700;
-	font-size: 4.5rem;
+	font-size: 4.75rem;
+	line-height: 4.5rem;
 	text-transform: uppercase;
 
 	margin: 0;
@@ -140,7 +167,7 @@ h1 {
 h2 {
 	color: #04387C;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 500;
+	font-weight: 300;
 	font-size: 3rem;
 
 	margin: 0;
@@ -149,7 +176,7 @@ h2 {
 .h2 {
 	color: #04387C;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 500;
+	font-weight: 300;
 	font-size: 3rem;
 
 	margin: 0;
@@ -160,6 +187,7 @@ h3 {
 	font-family: "aktiv-grotesk", sans-serif;
 	font-weight: 300;
 	font-size: 2rem;
+	line-height: 2rem;
 
 	margin: 0;
 }
@@ -169,6 +197,7 @@ h3 {
 	font-family: "aktiv-grotesk", sans-serif;
 	font-weight: 300;
 	font-size: 2rem;
+	line-height: 2rem;
 
 	margin: 0;
 }
@@ -177,7 +206,7 @@ h3 {
 h4 {
 	color: #6888B0;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 1.5rem;
 
 	margin: 0;
@@ -186,7 +215,7 @@ h4 {
 .h4 {
 	color: #6888B0;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 1.5rem;
 
 	margin: 0;
@@ -198,6 +227,8 @@ h5 {
 	font-weight: 500;
 	font-size: 1rem;
 	text-transform: uppercase;
+
+	margin: 0;
 }
 
 .h5 {
@@ -206,6 +237,8 @@ h5 {
 	font-weight: 500;
 	font-size: 1rem;
 	text-transform: uppercase;
+
+	margin: 0;
 }
 
 p {
@@ -229,6 +262,10 @@ p {
 	color: white;
 }
 
+.is-orng {
+	color: #F4741F;
+}
+
 /* -----Buttons----- */
 
 .btn-blue {
@@ -245,6 +282,10 @@ p {
 	font-size: 1rem;
 }
 
+.btn-blue:hover {
+	background-color: #F4741F;
+}
+
 .btn-white {
 	background-color: white;
     border-style: none;
@@ -259,9 +300,14 @@ p {
 	font-size: 1rem;
 }
 
+.btn-white:hover {
+	background-color: #F4741F;
+	color: white;
+}
+
 .btn-ghost {
 	background-color: transparent;
-	border: 2px solid #6888B0;
+	border: 2px solid #04387C;
  	border-radius: 4px;
 
  	height: 36px;
@@ -273,6 +319,20 @@ p {
 	font-size: 1rem;
 }
 
+.btn-ghost:hover {
+	background-color: #ECEEF5;
+	text: white;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h2 a {
+	text-decoration: underline;
+}
+
 .link-orng {
 	color: #F4741F;
 	font-family: "aktiv-grotesk", sans-serif;
@@ -281,10 +341,18 @@ p {
 	text-transform: uppercase;
 }
 
-/* -----Images */
+.link-orng:hover {
+	color: #6888B0;
+}
+
+/* -----Images----- */
 
 .nav-icon {
 	height: 24px;
+}
+
+.nav-icon:hover {
+	opacity: 50%;
 }
 
 .blurred-imgs {
@@ -296,14 +364,14 @@ p {
 	height: 2px;
 	width: 240px;
 
-	background-image: linear-gradient(to right, #F4741F , transparent 80%);
+	background-image: linear-gradient(to right, #F4741F , transparent);
 }
 
 .line-lightblue {
 	height: 2px;
 	width: 240px;
 
-	background-image: linear-gradient(to right, #6888B0 , transparent 80%);
+	background-image: linear-gradient(to right, #6888B0 , transparent);
 }
 
 .tab-img {
@@ -357,6 +425,10 @@ nav ul a:hover {
 	max-width: 80px;
 }
 
+#BIKE-logo:hover {
+	opacity: 50%;
+}
+
 .top-nav-btns {
 	display: flex;
 	flex-direction: row;
@@ -367,7 +439,7 @@ nav ul a:hover {
 /* TABS */
 
 .sect-tabs {
-	background-image: linear-gradient(to bottom, white 30%, #ECEEF5 30%);
+	background-image: linear-gradient(to bottom, white 20%, #ECEEF5 20%);
 }
 
 .tab {
@@ -408,6 +480,7 @@ nav ul a:hover {
 	display: grid;
 	grid-template : auto / 1fr 1fr 1fr;
 
+	margin-right: 48px;
 	gap: 48px;
 }
 
@@ -425,7 +498,7 @@ nav ul a:hover {
 .footer-headings a{
 	color: #04387C;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 1.25rem;
 	text-decoration: none;
 }
@@ -458,7 +531,7 @@ nav ul a:hover {
 label {
 	color: #6888B0;
 	font-family: "aktiv-grotesk", sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 1rem;
 	text-transform: uppercase;
 }
@@ -481,12 +554,17 @@ label {
 .copywrite {
 	background-color: #ECEEF5;
 	text-align: center;
+	font-weight: 400;
 
 	padding: 16px;
 }
 
 #footer .column-60 .flex-row-center {
 	gap: 16px;
+}
+
+.social-icons {
+	max-width: 50vw;
 }
 
 .social-icons img{
@@ -506,6 +584,11 @@ label {
 	.stack-mobile {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.stack-mobile-reverse {
+		display: flex;
+		flex-direction: column-reverse;
 	}
 	
 	.left-align-mobile {
@@ -567,6 +650,18 @@ label {
 		font-weight: 500;
 	}
 
+	.btn-blue {
+		width: 100%;
+	}
+
+	.btn-white {
+		width: 100%;
+	}
+
+	.btn-ghost {
+		width: 100%;
+	}
+
 	.sect-tabs {
 		background-image: linear-gradient(to bottom, white 10%, #ECEEF5 10%);
 	}
@@ -591,6 +686,13 @@ label {
 	.sponsor-logo {
 		height: auto;
 	}	
+
+	.step-wrapper {
+		flex-direction: column;
+		align-items: flex-start;
+
+		gap: 16px;
+	}
 
 }
 
