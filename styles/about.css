@@ -1,0 +1,52 @@
+/* GLOBAL STYLES */
+
+/* -----Layout----- */
+
+#about-us {
+	background-image: url("../images/about-us-desktop.jpg");
+	background-size: cover;
+}
+
+.staff-photos {
+	width: 100%;
+	max-width: 240px;
+	border-radius: 20rem;
+	box-shadow: 4px 4px 20px rgba(4, 56, 124, 0.2);
+}
+
+/* BREAKPOINTS */
+
+/* -----Smartphone----- */
+
+@media screen and (max-width: 480px) {
+
+	#about-us {
+		background-image: url("../images/about-us-mobile.jpg");
+		background-size: cover;
+	}
+
+}
+
+/* -----Tablet----- */
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    
+}
+
+/* -----Laptop----- */
+
+@media screen and (max-width: 1279px) and (min-width: 769px) {
+
+}
+
+/* -----Desktop----- */
+
+@media screen and (max-width: 1440px) and (min-width: 1280px) {
+
+}
+
+/* -----Extra-Large----- */
+
+@media screen and (min-width: 1441px) {
+
+}
